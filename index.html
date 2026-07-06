@@ -20,19 +20,17 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;b
 @keyframes float{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(5vw,-4vw) scale(1.1)}66%{transform:translate(-4vw,4vw) scale(.92)}}
 .wrap{position:relative;z-index:2;max-width:920px;margin:0 auto;padding:0 20px}
 @keyframes rise{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
-.reveal{opacity:0;animation:rise .7s cubic-bezier(.2,.9,.3,1) forwards}
-.no-anim .reveal,.reveal{}
-@media(prefers-reduced-motion:reduce){.reveal{animation:none;opacity:1}}
+.reveal{animation:rise .7s cubic-bezier(.2,.9,.3,1) both}
+@media(prefers-reduced-motion:reduce){.reveal{animation:none}}
 @keyframes shimmer{to{background-position:200% center}}
 /* HERO */
 .hero{min-height:88vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:calc(env(safe-area-inset-top,0) + 40px) 0 40px}
 .kick{font-size:12px;font-weight:800;letter-spacing:.28em;text-transform:uppercase;color:var(--muted);margin-bottom:18px}
-.hero h1{font-size:clamp(34px,9vw,64px);font-weight:900;line-height:1.05;letter-spacing:-.02em;
-  background:linear-gradient(90deg,#4ff0ff,#ff6ec7,#ffd166,#4ff0ff);background-size:200% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shimmer 6s linear infinite}
+.hero h1{font-size:clamp(34px,9vw,64px);font-weight:900;line-height:1.08;letter-spacing:-.02em;color:#fff;text-shadow:0 2px 34px rgba(255,110,199,.28),0 1px 2px rgba(0,0,0,.3)}
 .hero p{max-width:520px;color:var(--muted);font-size:clamp(15px,4vw,18px);font-weight:500;line-height:1.6;margin:20px auto 0}
 .trust{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:26px}
 .trust span{font-size:12px;font-weight:700;color:var(--ink);background:var(--glass);border:1px solid var(--stroke);padding:8px 14px;border-radius:20px}
-.scrollhint{margin-top:40px;color:var(--muted);font-size:13px;font-weight:600;animation:bob 2.2s ease-in-out infinite}
+.scrollhint{margin-top:40px;color:var(--muted);font-size:13px;font-weight:600;animation:bob 2.2s ease-in-out infinite;opacity:1}
 @keyframes bob{50%{transform:translateY(6px);opacity:.6}}
 /* SECTION */
 .sec{padding:56px 0}
@@ -81,7 +79,7 @@ footer .fh{font-weight:800;color:var(--ink);font-size:15px;margin-bottom:8px;let
 
 <section class="hero wrap">
   <div class="kick reveal">Hecho por Braulio 🎮</div>
-  <h1 class="reveal" style="animation-delay:.05s">Juegos para reírte con quien quieras</h1>
+  <h1>Juegos para reírte con quien quieras</h1>
   <p class="reveal" style="animation-delay:.15s">Para el grupo, la familia o solo para dos. Desde el celular, sin instalar nada, gratis. Elige con quién juegas.</p>
   <div class="trust reveal" style="animation-delay:.25s"><span>✅ Sin instalar</span><span>🔓 Sin cuentas</span><span>💛 Gratis</span></div>
   <a href="#elige" class="scrollhint reveal" style="animation-delay:.35s;color:inherit;text-decoration:none">↓ Elegir juego</a>
